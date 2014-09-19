@@ -5,8 +5,8 @@
     <script src="http://jwpsrv.com/library/4XUSqnfuEeOW7yIACmOLpg.js"></script>
     <script type="text/javascript">
         var primaryCookie = 'html5';
-        var skinURL = "six/six.xml";
-        
+        var skinURL = "vapor/vapor.xml";
+
         var cookies = document.cookie.split(";");
         for (i=0; i < cookies.length; i++) {
             var x = cookies[i].substr(0, cookies[i].indexOf("="));
@@ -14,7 +14,7 @@
             x = x.replace(/^\s+|\s+$/g,"");
             if (x == 'primaryCookie') {
                 primaryCookie = y;
-            } else if (x == 'skinURL') { 
+            } else if (x == 'skinURL') {
                 skinURL = y;
             }
         }
@@ -71,7 +71,7 @@
           description: "This example shows a binary HD and Closed Captions Buttons.",
           image: 'http://content.jwplatform.com/thumbs/bkaovAYt-640.jpg',
           tracks: [{
-            file: 'http://content.jwplatform.com/captions/Y1lkLS9j.txt' 
+            file: 'http://content.jwplatform.com/captions/Y1lkLS9j.txt'
           }],
         },{
           sources: [{
@@ -129,9 +129,9 @@
         height: 270
     });
     jwplayer("extensive").onReady(function() {
-        if(jwplayer().getRenderingMode() == "flash") { 
+        if(jwplayer().getRenderingMode() == "flash") {
             this.addButton("assets/html5.png", "Switch to HTML5", switchMode, "button1");
-        } else { 
+        } else {
             this.addButton("assets/flash.png", "Switch to Flash", switchMode, "button1");
         }
         this.addButton("assets/error.png", "Generate an Error", setError, "button2");
